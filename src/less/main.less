@@ -1,0 +1,43 @@
+@monokai-background: #272822;
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body,
+main{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;   //解决 100vh 底部留白 bug
+}
+
+.editor-container,
+.preview-container{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+}
+
+#md-edit,
+#md-preview{
+    height: 100%;
+    width: 100%;
+}
+
+#md-edit{
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: @monokai-background;
+    color: white;
+    padding: 10px 20px;
+}
+
+#md-preview{
+    padding: 20px;
+    overflow-y: auto;
+}
